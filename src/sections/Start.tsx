@@ -14,7 +14,7 @@ const Start = () => {
             } else if (item.type === "list") {
               return (
                 <ul key={index}>
-                  {item.items.map((li, idx) => (
+                  {item.items?.map((li, idx) => (
                     <li key={idx}>{li}</li>
                   ))}
                 </ul>
@@ -22,7 +22,7 @@ const Start = () => {
             } else if (item.type === "code") {
               return (
                 <code id="code" key={index}>
-                  {item.text.split(";").map((line, idx) => (
+                  {item.text?.split(";").map((line, idx) => (
                     <div key={idx}>{line.trim()};
                     </div>
                   ))}
